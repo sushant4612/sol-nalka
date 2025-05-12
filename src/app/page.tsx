@@ -44,8 +44,12 @@ export default function Home() {
       }
       
       setStatus(`Success! ${solAmount} SOL has been sent to ${publicKey.toString().slice(0, 8)}...`);
-    } catch (err: any) {
-      setError(err.message || "Failed to request airdrop. Please check your inputs and try again.");
+    } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Failed to request airdrop. Please check your inputs and try again.");
+        }
     } finally {
       setLoading(false);
     }
