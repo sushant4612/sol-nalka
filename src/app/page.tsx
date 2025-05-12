@@ -173,7 +173,7 @@ export default function Home() {
         
         <div className="mt-8 text-center text-xs text-blue-300/70">
           <p>Sol Nalka provides test SOL for development purposes</p>
-          <p className="mt-1">Powered by Solana's Web3.js</p>
+          <p className="mt-1">{`Powered by Solana's Web3.js`}</p>
         </div>
       </div>
     </div>
