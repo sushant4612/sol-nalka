@@ -27,7 +27,7 @@ export default function Home() {
         throw new Error("Please enter a valid SOL amount");
       }
       
-      let connectionUrl = (network === 'testnet') ? "https://api.testnet.solana.com" : "https://api.devnet.solana.com";
+      const connectionUrl = (network === 'testnet') ? "https://api.testnet.solana.com" : "https://api.devnet.solana.com";
       const connection = new Connection(connectionUrl, "confirmed");
       
       const publicKey = new PublicKey(keyRef.current?.value);
